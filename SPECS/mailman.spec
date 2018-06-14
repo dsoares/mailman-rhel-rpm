@@ -44,6 +44,7 @@ Patch22: mailman-2.1.15-check_perms.patch
 # https://bugzilla.redhat.com/show_bug.cgi?id=1351939
 #Patch25: mailman-2.1.15-rh1351939.patch
 #Patch26: mailman-2.1.12-newlist-ja.patch
+Patch27: mailman-2.1.26-mailmanctl-status.patch
 
 License: GPLv2+
 URL: http://www.list.org/
@@ -145,6 +146,7 @@ additional installation steps, these are described in:
 #%patch24 -p1
 #%patch25 -p0
 #%patch26 -p1
+%patch27 -p1 -b .status
 
 # Change `#!/usr/bin/env python` shebang to `#!/usr/bin/python`
 sed -i '1s|^#! */usr/bin/env python$|#!/usr/bin/python|' `find -iname '*.py'`
