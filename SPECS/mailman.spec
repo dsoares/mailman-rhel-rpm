@@ -45,6 +45,7 @@ Patch22: mailman-2.1.15-check_perms.patch
 #Patch25: mailman-2.1.15-rh1351939.patch
 #Patch26: mailman-2.1.12-newlist-ja.patch
 Patch27: mailman-2.1.26-mailmanctl-status.patch
+Patch28: mailman-2.1.26-encode-decode.patch
 
 License: GPLv2+
 URL: http://www.list.org/
@@ -147,6 +148,7 @@ additional installation steps, these are described in:
 #%patch25 -p0
 #%patch26 -p1
 %patch27 -p1 -b .status
+%patch28 -p1 -b .encodedecode
 
 # Change `#!/usr/bin/env python` shebang to `#!/usr/bin/python`
 sed -i '1s|^#! */usr/bin/env python$|#!/usr/bin/python|' `find -iname '*.py'`

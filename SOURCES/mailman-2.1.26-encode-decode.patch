@@ -1,0 +1,15 @@
+--- mailman-2.1.26/Mailman/Handlers/ToDigest.py	2018-02-04 17:04:39.000000000 +0000
++++ mailman-2.1.26-new/Mailman/Handlers/ToDigest.py	2018-06-14 15:05:05.039953379 +0100
+@@ -72,10 +72,9 @@
+     # Convert text from unicode or lcset to output cset.
+     ocset = Charset(lcset).get_output_charset() or lcset
+     if isinstance(text, unicode):
+-        return text.encode(ocset, errors='replace')
++        return text.encode(ocset, 'replace')
+     else:
+-        return text.decode(lcset, errors='replace').encode(ocset,
+-                                                           errors='replace')
++        return text.decode(lcset, 'replace').encode(ocset, 'replace')
+ 
+ 
+ 
